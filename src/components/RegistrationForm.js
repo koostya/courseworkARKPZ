@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Form from "./Forms/Registration/index"
+import { Link } from 'react-router-dom'
 
 import { submitRegistrationForm } from '../actions/registration/index'
 
@@ -18,6 +19,9 @@ class RegistrationForm extends Component {
         return(
             <div className="form">
                 <Form onSubmit={this.submit} />
+                <Link to="/login">
+                    Log in
+                </Link>
             </div>
         );
     }
