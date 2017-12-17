@@ -6,9 +6,11 @@ exports.vote = function vote(router) {
         let body = JSON.parse(ctx.request.body)
         
         const votes = await Vote.find({nickname: body.nickname, id: body.id})
+        const users = await User.find({nickname: body.nickname})
 
-        if (votes.length === 0) {
+        if (votes.length === 0 && users[0].id !== body.id) {
             await User.update({'id': body.id}, {$set: {rating: body.rating}})
+
             let vote = new Vote({
                 nickname: body.nickname,
                 id: body.id

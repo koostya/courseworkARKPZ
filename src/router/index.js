@@ -4,6 +4,7 @@ import Profile from '../containers/Profile'
 import Login from '../containers/Login'
 import Registration from '../containers/Registration'
 import Main from '../containers/Main'
+import NotFound from '../containers/NotFound'
 
 import { Route, Redirect, Switch } from 'react-router-dom'
 
@@ -15,13 +16,17 @@ class Routes extends Component {
             <div>
                 {isUserAuthorized() ?
                     <Switch>
-                        <Route path="/profile" component={Profile} />
-                        <Route path="/main" component={Main} />
+                        <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/main" component={Main} />
+                        <Route exact path="/" render={() => (<Redirect to="/profile" />)} />
+                        <Route component={NotFound} /> 
                     </Switch>
                     :
                     <Switch>
-                        <Route path="/login" component={Login} />
-                        <Route path="/registration" component={Registration} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/registration" component={Registration} />
+                        <Route exact path="/" render={() => (<Redirect to="/login" />)} /> 
+                        <Route component={NotFound} /> 
                     </Switch>
                 }
             </div>

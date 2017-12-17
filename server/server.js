@@ -3,6 +3,7 @@ const Koa = require('koa')
 const Router = require('koa-router')
 const BodyParser = require('koa-body-parser')
 const serve = require('koa-static')
+const send = require('koa-send')
 const cors = require('@koa/cors')
 
 // connection to db
@@ -28,6 +29,7 @@ require('./vote/index').vote(router)
 
 app.use(router.routes())
 app.use(router.allowedMethods())
+
 
 app.listen(PORT, function() {
     console.log('Server started')
