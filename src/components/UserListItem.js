@@ -6,14 +6,15 @@ import { Vote } from '../actions/vote/index'
 class UserListItem extends Component {
 
     vote = (nickname, idOfVote, rating) => {
-        this.props.dispatch(Vote(nickname, idOfVote, rating++))
+        rating++
+        this.props.dispatch(Vote(nickname, idOfVote, rating))
     }
 
     render() {
-        const { nickname, userInfo, index } = this.props
+        const { nickname, userInfo } = this.props
 
         return(
-            <li key={index}>
+            <li>
                 <strong>{ userInfo.nickname }</strong>
                 <span className="user_rating">{ userInfo.rating }</span>
                 <button 

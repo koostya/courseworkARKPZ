@@ -1,19 +1,25 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { getUsers } from '../actions/users/index'
+
 import Item from './UserListItem'
  
 class UserList extends Component {
+
+    componentDidMount = () => {
+        this.props.dispatch(getUsers())
+    }
+
     render() {
         const { users } = this.props
-
+        console.log(users)
         return(
             <ul>
                 {users.map((user, i) => (
                     <Item 
                         key={i}
                         userInfo={user}
-                        index={i}
                     />
                 ))}
             </ul>
