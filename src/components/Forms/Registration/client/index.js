@@ -16,6 +16,10 @@ const validate = values => {
     if (!values.password) {
         errors.password = 'Required'
     } 
+
+    if (!values.description) {
+        errors.description = 'Required'
+    } 
     
     return errors
 }

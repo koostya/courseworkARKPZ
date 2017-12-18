@@ -16,7 +16,7 @@ class LoginForm extends Component {
         return(
             <div className="form">
                 <Form onSubmit={this.submit} />
-                <Link to="/registration">
+                <Link to="/registration" className="link">
                     Registration
                 </Link>
             </div>

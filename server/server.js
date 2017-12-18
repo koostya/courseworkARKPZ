@@ -15,6 +15,7 @@ const PORT = 3001
 // models
 const User = require('./models/User')
 const Vote = require('./models/Vote')
+const Credit = require('./models/Credit')
 
 // app consts
 const app = new Koa()
@@ -26,6 +27,8 @@ app.use(cors())
 
 require('./user/index').user(router)
 require('./vote/index').vote(router)
+require('./credit/index').credit(router)
+require('./iot/index').iot(router)
 
 app.use(router.routes())
 app.use(router.allowedMethods())

@@ -17,6 +17,10 @@ export function Vote(nickname, id, rating) {
             return res.json()
         }).then((json) => {
             console.log(json)
+            dispatch({
+                type: 'VOTE',
+                body: json
+            })
         })
     }
 }

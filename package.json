@@ -5,6 +5,7 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"react-scripts start\"",
     "build": "react-scripts build",
+    "iot": "concurrently \"npm run server\" \"nodemon iot/index.js\"",
     "test": "react-scripts test --env=jsdom",
     "server": "nodemon server/server.js"
   },

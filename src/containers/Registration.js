@@ -8,7 +8,6 @@ class Registration extends Component {
     render() {
         return (
             <div className="profile">
-                <h1>Registration</h1>
                 <RegistrationForm />
             </div>
         )

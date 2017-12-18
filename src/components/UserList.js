@@ -13,9 +13,8 @@ class UserList extends Component {
 
     render() {
         const { users } = this.props
-        console.log(users)
         return(
-            <ul>
+            <ul className="users_list">
                 {users.map((user, i) => (
                     <Item 
                         key={i}

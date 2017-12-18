@@ -16,6 +16,8 @@ exports.user = function user(router) {
             name: body.name,
             surname: body.surname,
             rating: 0,
+            description: body.description,
+            money: 0,
             password: body.password
         })
 
@@ -68,10 +70,10 @@ exports.user = function user(router) {
         ctx.response.body = user
     })
     
-    router.put("/user/:id", async (ctx) => {
+    router.put("/user/:nickname", async (ctx) => {
         const body = JSON.parse(ctx.request.body)
     
-        await User.update({'id': body.id}, {$set: {'name': body.name, 'surname': body.surname}})
+        await User.update({'nickname': body.nickname}, {$set: {'money': body.money}})
     
         ctx.response.body = ctx.request.body
     })

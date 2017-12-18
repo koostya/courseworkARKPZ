@@ -12,6 +12,7 @@ const SyncValidationForm = (props) => {
         <Field name="name" type="text" component={renderField} placeholder="name" className='input' />
         <Field name="surname" type="text" component={renderField} placeholder="surname" className='input' />
         <Field name="password" type="password" component={renderField} placeholder="password" className='input'/>
+        <Field name="description" type="textarea" component={renderField} placeholder="description" className='textarea input'/>
         <div>
           <button type="submit" className='form_button' disabled={submitting}>Registration</button>
         </div>

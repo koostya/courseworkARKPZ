@@ -1,3 +1,9 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
 .user_rating {
     padding-left: 20px;
 }
@@ -19,4 +25,376 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
+}
+
+.input {
+    width: 100%;
+    min-height: 25px;
+    margin-bottom: 10px;
+}
+
+.input input {
+    margin-bottom: 0;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 0 0 10px -4px black;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.form {
+    max-width: 400px;
+    min-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form_button { 
+    width: 100%;
+    height: 20px;
+    transition: all .3s;
+    border-radius: 10px;
+}
+
+.form_button:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: white;
+}
+
+.form_button:focus {
+    outline: none;
+}
+
+.profile {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form_error {
+    font-size: 10px;
+    margin-top: -10px;
+    font-family: sans-serif;
+    color: red;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 13px;
+    color: #00685A;
+    transition: all .3s;
+}
+
+.link:hover {
+    color: black;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #1E786C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header_name {
+    padding-left: 20px;
+    color: #34D0BA;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.header .header_nickname {
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.userlist_item {
+    width: 100%;
+    box-shadow: 0 0 10px -4px black;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.userlist_item {
+    list-style: none;
+    width: 100%;
+    display: block;
+}
+
+.user_vote_but {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.user_vote_but:focus {
+    outline: none;
+}
+
+.user_vote_but:before {
+    position: absolute;
+    width: 70%;
+    height: 5px;
+    background-color: #1E786C;
+    content: "";
+    top: 50%;
+    left: 69%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 3px;
+}
+
+.user_vote_but:after {
+    position: absolute;
+    width: 70%;
+    height: 5px;
+    background-color: #1E786C;
+    content: "";
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-radius: 3px;
+}
+
+.user_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.user_header {
+    min-height: 20px;
+    background-color: #00A08A;
+}
+
+.user_header > .nickname {
+    color: white;
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.user_rating {
+    text-align: center;
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.users_list {
+    padding-left: 0;
+}
+
+.leave_request {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    height: 20px;
+    transition: all .3s;
+    border-radius: 10px;
+}
+
+.leave_request:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    outline: none;
+}
+
+.textarea {
+    min-height: 40px;
+    max-height: 80px;
+}
+
+.logout_but {
+    background-color: #34D0BA;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all .3s;
+    margin-right: 20px;
+}
+
+.logout_but:hover {
+    background-color: white;
+    color: #34D0BA;
+}
+
+.user_description {
+    max-width: 300px;
+}
+
+.profile_user {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0 30px;
+}
+
+.profile_info .label {
+    margin-bottom: 2px;
+    display: block;
+}
+
+.profile_info div {
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+
+.money_quantity {
+    font-size: 19px;
+    font-weight: 900;
+    position: relative;
+}
+
+.change_money_input {
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    width: 80px;
+    height: 23px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.change_money_input:focus {
+    outline: none;
+}
+
+.credit_modal_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 900;
+}
+
+.credit_modal_close_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 998;
+    top: 0;
+    left: 0;
+}
+
+.credit_modal_inner {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 2px solid #00A08A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.credit_modal_inner .title {
+    margin-bottom: 40px;
+}
+
+.credit_modal_input {
+    border-radius: 5px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.credit_modal_input:focus {
+    outline: none;
+}
+
+.confirm_modal_but {
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.confirm_modal_but:hover {
+    background-color: #ccc;
+}
+
+.leave_request:focus {
+    outline: none;
+}
+
+.label_who,
+.label_how_much {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.requests_table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.requests_table td {
+    width: 40%;
+    margin: 0;
+    padding: 10px;
+}
+
+.requests_table td:last-child {
+    width: 20%;
+}
+
+.requests_table td:nth-child(1) {
+    border-right: 1px solid black;
+}
+
+.requests_table tr:nth-child(2n) {
+    background-color: #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+.requests_table tr:nth-child(2n + 1) {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.accept_but_wrap {
+    position: relative;
+}
+
+.accept_but_wrap button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.pay_but_wrap button {
+    background-color: #ccc;
 }
