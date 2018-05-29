@@ -7,7 +7,7 @@ exports.iot = function iot(router) {
               creditorID = ctx.request.query.creditorID,
               body = {}
 
-        const credit = await Credit.findOne({active: true, creditor: '1513548613991'})
+        const credit = await Credit.findOne({creditor: creditorID})
         body.credit = credit
         ctx.response.body = body
     })
