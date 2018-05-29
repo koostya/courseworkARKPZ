@@ -60,7 +60,7 @@ class Profile extends Component {
                                     onDoubleClick={() => this.moneyEditing()}
                                 >
                                     { money }
-                                    {editingMoney ? 
+                                    {editingMoney &&
                                         <input 
                                             className="change_money_input"
                                             type="number"
@@ -69,8 +69,6 @@ class Profile extends Component {
                                             onBlur={(e) => this.moneyChangesConfirm(e)}
                                             onKeyPress={(e) => this.moneyChangesConfirm(e)}
                                         />
-                                        :
-                                        ''
                                     }
                                 </span>
                             </div>
